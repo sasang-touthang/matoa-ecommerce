@@ -44,7 +44,7 @@ router.post("/create-checkout-session", (req, res) =>
         allowed_countries: ["IN"],
       },
       line_items: req.body.items.map((item) => {
-        let image = `${process.env.URL_BACKEND}${item.product.image}`;
+        let image = `${process.env.IMAGE_URL}${item.product.image}`;
         console.log(image);
         return {
           price_data: {
